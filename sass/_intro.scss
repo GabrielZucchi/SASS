@@ -1,0 +1,32 @@
+@use 'colors';
+
+.intro{
+
+    height: 84vh;
+
+    &__test{
+        background-image: url('Imagens/intro.jpg');
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        background-position: center;
+
+    }
+
+    &__title{
+        grid-column: 2/5;
+        grid-row: 2/3;
+    }
+}
+
+@media (min-width:1024px){
+
+        .intro{
+
+            &__background{
+                max-width: 100%;
+                max-height: none;
+
+            }
+        }
+}

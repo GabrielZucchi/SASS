@@ -1,0 +1,59 @@
+@use 'colors';
+@use 'sass:math';
+
+$height:8vh;
+
+.header{
+
+    height: 16vh;
+    font-size: 0.75rem;
+    background-color: colors.$laranja-principal;
+
+    display: flex;
+    flex-direction: row;
+    gap: 16vw;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+
+    &__logo{
+        max-height: calc($height * 0.95);
+        min-height: calc($height * 0.8);
+    }
+
+    &__nav{
+        display: flex;
+        flex-direction:column;
+        gap: 1vh;
+        justify-content: center;
+    }
+
+    &__nav__link{
+        color: colors.$branco-1;
+        transition: ease 0.3s;
+    }
+
+    &__nav__link:hover{
+        transition: ease 0.3s;
+        color: colors.$laranja-claro;
+    }
+}
+
+@media (min-width:1024px){
+
+
+.header{
+
+    height: 8vh;
+    font-size: 1rem;
+    
+    &__nav{
+        display: flex;
+        flex-direction:row;
+        gap: 2vw;
+        justify-content: center;
+    }
+
+}
+
+}
