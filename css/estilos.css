@@ -49,6 +49,8 @@
 }
 .intro {
   height: 84vh;
+}
+.intro__test {
   background-image: url("Imagens/intro.jpg");
   background-size: cover;
   width: 100%;
