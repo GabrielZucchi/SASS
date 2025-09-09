@@ -1,0 +1,25 @@
+@use 'colors';
+@use 'sizes';
+
+
+.depoimentos{
+    height: 92vh;
+
+    &__container{
+
+
+        &__depoimento{
+            display: grid;
+
+            &__foto{
+                width: 100px;
+                height: 100px;
+            }
+
+            &__nome{
+                color: colors.$preto;
+            }
+
+        }
+    }
+}
