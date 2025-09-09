@@ -25,6 +25,7 @@ $height:8vh;
     &__logo:hover{
         transition: 0.3s ease;
         transform: scale(1.5);
+        cursor: pointer;
     }
 
     &__nav{
@@ -42,6 +43,7 @@ $height:8vh;
     &__nav__link:hover{
         transition: ease 0.3s;
         color: colors.$laranja-claro;
+        cursor: pointer;
     }
 }
 
