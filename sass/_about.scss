@@ -16,7 +16,7 @@
     &__titulo{
         color: colors.$preto;
         font-weight: bold;
-        font-size: sizes.$titulo-grande;
+        font-size: calc(sizes.$titulo-grande * 1.5);
 
         grid-column: 1/-1;
         grid-row: 1;
@@ -48,7 +48,7 @@
 
     &__button{
         border-radius: 2px;
-        border-color: colors.$laranja-escuro;
+        border-image: linear-gradient(to right, colors.$laranja-principal, colors.$preto) 1;
         background-color: colors.$laranja-principal; 
         color: colors.$branco-1;
         font-weight: bold;

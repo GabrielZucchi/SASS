@@ -1,7 +1,60 @@
 @use 'colors';
 @use 'sizes';
+@use 'sass:math';
 
 .servicos{
     height: 92vh;
     background-color: colors.$preto;
+
+    display: flex;
+    gap:1vw;
+
+    &__card{
+        
+        display: grid;
+        grid-template-columns: 1fr 6fr 1fr;
+        grid-row: 5% 10% 10% 35% 35% 5%;
+
+        align-items: center;
+        justify-items: center;
+
+        max-width: 32vw;
+
+        &__title{
+            color: colors.$laranja-escuro;
+            font-size: calc(sizes.$titulo-padrao * 1.5);
+
+            grid-column: 2;
+            grid-row: 2;
+
+            text-align: center;
+        }
+
+        &__sub-title{
+            color: colors.$branco-1;
+
+            grid-column: 2;
+            grid-row: 3;
+        }
+
+        &__text{
+            color: colors.$branco-1;
+
+            grid-column: 2;
+            grid-row: 4;
+
+            text-align: justify;
+        }
+
+        &__img{
+            min-width: 300px;
+            max-width: 100%;
+            object-fit: cover;
+
+            grid-column: 2;
+            grid-row: 5;
+        }
+    }
+
+
 }
