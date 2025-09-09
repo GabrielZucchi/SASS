@@ -21,20 +21,89 @@
 }
 
 
+.servicos{
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+
+    height: 100hv;
+    background-color: colors.$preto;
+
+    &__card{
+        display: flex;
+        flex-direction: column;
+        grid-column: 2;
+
+        width: 80%;
+        align-self: center;
+
+        &__inner-card{
+            display: grid;
+            row-gap: 2vh;
+
+            border: 2px solid;
+            border-radius: 12px;
+            border-color: colors.$laranja-principal;
+
+            &__title{
+                color: colors.$laranja-escuro;
+                text-align: center;
+                padding-left: 10%;
+                padding-right: 10%;
+            }
+
+
+            &__sub-title{
+                color: colors.$branco-1;
+                text-align: center;
+                padding-left: 10%;
+                padding-right: 10%;
+            }
+
+            &__text{
+                color: colors.$branco-1;
+                text-align: justify;
+                padding-left: 10%;
+                padding-right: 10%;
+                
+            }
+
+            &__button{
+                background-color: colors.$branco-1;
+                color: colors.$laranja-principal;
+                border-color: colors.$laranja-escuro;
+
+                width: 30vw;
+                height: 4vh;
+
+                align-self: center;
+                justify-self: center;
+            }
+
+            &__button:hover{
+                background-color: colors.$laranja-principal;
+                color: colors.$branco-1;
+                border-color: colors.$laranja-escuro;
+            }
+
+            &__img{
+                width:80%;
+                justify-self: center;
+                padding-bottom: 8%;
+            }
+        }
+    }
+}
+
 
 @media (min-width:1024px){
 
     .servicos{
         height: 92vh;
-        background-color: colors.$preto;
 
         display: flex;
+        flex-direction: row;
         justify-content: center;
-
-        &__title{
-            color: colors.$branco-1;
-            justify-self: center;
-        }
 
         &__card:hover{
 
@@ -48,8 +117,8 @@
             grid-template-columns: 1fr 12fr 1fr;
             grid-template-rows: 16fr 1fr;
 
-            max-width: 32vw;
-
+            max-width: 100%;
+            height: 95%;
             transition: ease 0.3s;
 
             &__inner-card{
@@ -58,7 +127,7 @@
 
                 display: grid;
                 grid-template-columns: 1fr 12fr 1fr;
-                grid-template-rows: 5% 10% 10% 20% 5% 5% 35% 10%;
+                grid-template-rows: auto;
 
                 align-items: center;
                 justify-items: center;
@@ -68,36 +137,31 @@
                 border-color: colors.$laranja-principal;
 
                 &__title{
-                    color: colors.$laranja-escuro;
                     font-size: calc(sizes.$titulo-padrao * 1.5);
 
+                    grid-column: 2;
+                    grid-row: 1;
+
+                    text-align: center;
+                }
+
+                &__sub-title{
                     grid-column: 2;
                     grid-row: 2;
 
                     text-align: center;
                 }
 
-                &__sub-title{
-                    color: colors.$branco-1;
-
+                &__text{
                     grid-column: 2;
                     grid-row: 3;
-
-                    text-align: center;
-                }
-
-                &__text{
-                    color: colors.$branco-1;
-
-                    grid-column: 2;
-                    grid-row: 4;
 
                     text-align: justify;
                 }
 
                 &__button{
                     grid-column: 2;
-                    grid-row: 5;
+                    grid-row: 4;
 
                     height: 6vh;
                     width: 8vw;
@@ -105,24 +169,14 @@
                     min-height: 5vh;
                     min-width: 5vw;
 
-                    background-color: colors.$branco-1;
-                    color: colors.$laranja-principal;
-                    border-color: colors.$laranja-escuro;
-
                     font-weight: bold;
 
                     transition: 0.3s ease;
                 }
 
                 &__button:hover{
-
-                    background-color: colors.$laranja-principal;
-                    color: colors.$branco-1;
-                    border-color: colors.$laranja-escuro;
-
                     transition: ease 0.3s;
                     cursor: pointer;
-
                 }
 
                 &__img{
@@ -131,7 +185,7 @@
                     object-fit: cover;
 
                     grid-column: 2;
-                    grid-row: 7/9;
+                    grid-row: 5/8;
 
                     border-radius: 8px;
                 }
