@@ -339,6 +339,52 @@
     border-radius: 8px;
   }
 }
+.depoimentos {
+  height: 92vh;
+}
+.depoimentos__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+.depoimentos__container__depoimento {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: 10% 20% 20% 50%;
+  row-gap: 1vh;
+  max-height: 20vh;
+  overflow: hidden;
+  padding: 2%;
+}
+.depoimentos__container__depoimento__foto {
+  border-radius: 50%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  grid-column: 1;
+  grid-row: 1/-1;
+  align-self: center;
+  justify-self: center;
+  object-fit: cover;
+  width: 100px;
+  height: 100px;
+}
+.depoimentos__container__depoimento__nome {
+  color: rgb(14, 13, 13);
+  grid-column: 2;
+  font-size: 1.5rem;
+}
+.depoimentos__container__depoimento__cargo {
+  color: #ff7300;
+  grid-column: 2;
+  font-size: 1.2rem;
+}
+.depoimentos__container__depoimento__texto {
+  color: rgb(14, 13, 13);
+  grid-column: 2;
+  font-size: 1rem;
+  font-style: italic;
+  text-align: justify;
+}
+
 * {
   font-family: sans-serif;
 }

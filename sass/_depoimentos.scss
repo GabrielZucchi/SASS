@@ -6,20 +6,59 @@
     height: 92vh;
 
     &__container{
-
+        display: flex;
+        flex-direction: column;
+        gap: 2vh;
 
         &__depoimento{
             display: grid;
+            grid-template-columns: 40% 60%;
+            grid-template-rows: 10% 20% 20% 50%;  
+            
+            row-gap: 1vh;
+            max-height: 20vh;
+
+            overflow: hidden;
+
+            padding: 2%;
 
             &__foto{
+                border-radius:50%;
+                box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+
+                grid-column: 1;
+                grid-row: 1/-1;
+                align-self: center;
+                justify-self: center;
+
+                object-fit: cover;
+
                 width: 100px;
                 height: 100px;
             }
 
             &__nome{
                 color: colors.$preto;
+                grid-column: 2;
+
+                font-size: 1.5rem;
             }
 
+            &__cargo{
+                color: colors.$laranja-principal;
+                grid-column: 2;
+
+                font-size: 1.2rem;
+            }
+
+            &__texto{
+                color: colors.$preto;
+                grid-column: 2;
+                font-size: 1rem;
+                font-style: italic;
+
+                text-align: justify;
+            }
         }
     }
 }
