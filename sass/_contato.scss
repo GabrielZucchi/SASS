@@ -1,0 +1,116 @@
+@use 'colors';
+
+.contato{
+    height: auto;
+    padding-bottom: 2vh;
+    background-color: colors.$branco-2;
+
+
+    &__title{
+        text-align: center;
+        color: colors.$laranja-principal;
+        padding-bottom: 2vh;
+        padding-top: 2vh;
+    }
+
+    &__img{
+        display:none
+    }
+
+    &__formulario{
+        padding-left: 10%;
+        padding-right: 10%;
+        display:grid;
+        row-gap: 1vh;
+
+        &__input{
+            border-radius: 8px;
+            border-color: colors.$laranja-claro;
+        }
+
+        &__input:focus{
+            outline: none;
+            border-color: colors.$laranja-principal;
+        }
+
+        &__label{
+            color: colors.$laranja-principal;
+            font-weight: bold;
+        }
+    }
+}
+
+@media (min-width:755px){
+
+    .contato{
+        overflow: hidden;
+        width:100%;
+
+        display: grid;
+        grid-template-columns: 2;
+        grid-template-rows: 2;
+
+        &__img{
+            grid-column: 2;
+            display: none;
+            width: 50%;
+            grid-row: 2;
+            justify-self: center;
+            object-fit: cover;
+        }
+
+        &__title{
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+        &__formulario{
+            grid-column: 1;
+            grid-row:2;
+
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: auto;
+            column-gap: 2vw;
+
+            &__nome-label{
+                grid-column: 1;
+                grid-row: 1;
+            }
+
+            &__nome-input{
+                grid-column: 1/-1;
+                grid-row:2
+            }
+
+            &__email-label{
+                grid-column: 1;
+                grid-row: 3;
+            }
+
+            &__email-input{
+                grid-column: 1;
+                grid-row:4;
+            }
+
+            &__telefone{
+                grid-column: 2;
+                grid-row: 3;
+            }
+
+            &__telefone-input{
+                grid-column: 2;
+                grid-row:4;
+            }
+
+            &__mensagem{
+                grid-column: 1;
+                grid-row:5;
+            }
+            &__mensagem-box{
+                grid-column: 1/-1;
+                grid-row:6;
+            }
+        }
+    }
+}

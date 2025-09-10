@@ -3,24 +3,34 @@
 
 
 .depoimentos{
-    height: 92vh;
+    height: auto;
+    padding-top: 4vh;
+    padding-bottom: 4vh;
 
     &__container{
         display: flex;
         flex-direction: column;
         gap: 2vh;
+        padding-right: 10%;
+        padding-left: 10%;
 
         &__depoimento{
             display: grid;
             grid-template-columns: 40% 60%;
-            grid-template-rows: 10% 20% 20% 50%;  
+            grid-template-rows: 20% 30% 50%;  
             
             row-gap: 1vh;
-            max-height: 20vh;
+            height: auto;
 
             overflow: hidden;
 
-            padding: 2%;
+            padding-right: 5%;
+
+            width: 100%;
+
+            border: 2px solid;
+            border-radius: 12px;
+            border-color: colors.$laranja-principal;
 
             &__foto{
                 border-radius:50%;
@@ -33,32 +43,71 @@
 
                 object-fit: cover;
 
-                width: 100px;
-                height: 100px;
+                height: 110px;
+                width: 110px;
             }
 
             &__nome{
                 color: colors.$preto;
                 grid-column: 2;
 
-                font-size: 1.5rem;
+                font-size: 1.2rem;
             }
 
             &__cargo{
                 color: colors.$laranja-principal;
                 grid-column: 2;
 
-                font-size: 1.2rem;
+                font-size: 1rem;
             }
 
             &__texto{
                 color: colors.$preto;
                 grid-column: 2;
-                font-size: 1rem;
+                font-size: 0.85rem;
                 font-style: italic;
 
                 text-align: justify;
             }
         }
+    }
+}
+
+
+@media (min-width:1024px){
+
+    .depoimentos{
+        max-height: 32vh;
+
+        &__container{
+            display: flex;
+            flex-direction: row;
+            padding-right: 2%;
+            padding-left: 2%;
+
+            height: 90%;
+
+            &__depoimento{
+                padding-right: 1%;
+
+                display: grid;
+                grid-template-columns: 40% 60%;
+                grid-template-rows: 10% 10% 20% 50%;  
+
+                &__nome{
+                    grid-row:2;
+                }
+
+                &__cargo{
+                    grid-row: 3;
+                }
+
+                &__texto{
+                    grid-row: 4;
+                }
+
+            }
+        }
+
     }
 }

@@ -6,8 +6,9 @@
 @use 'sizes';
 @use 'servicos.scss';
 @use 'depoimentos';
-
+@use 'footer';
+@use 'contato';
 
 *{
-    font-family: sans-serif;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
